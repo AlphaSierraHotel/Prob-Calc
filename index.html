@@ -1,0 +1,121 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Probability Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="calculator">
+    <div class="work-area">
+      <div class="input">
+        <form>
+          <div class="flex">
+            <span>
+              <label for="price">Current Price</label>
+            </span>
+
+            <input id="price" type="number" name="price">
+          </div>
+          <div class="flex">
+            <span>
+              <label for="date">Future Date</label>
+            </span>
+            <input id="date" calss="date" type="date">
+          </div>
+          <div class="flex">
+            <span>
+              <label for="day">Days Ahead (optional)</label>
+            </span>
+            <input id="day" calss="day" type="number">
+          </div>
+          <div class="flex">
+            <span>
+              <label for="volatility">Future Volatility</label>
+            </span>
+            <input id="volatility" calss="volatility" type="number">
+          </div>
+          <div class="flex">
+            <div class="targets">
+              <div class="flex1">
+                <span>
+                  <label for="first_target">First Target</label>
+                </span>
+                <input id="first_target" calss="first_target" type="number">
+              </div>
+              <div class="flex1">
+                <span>
+                  <label for="second_target">Second Target</label>
+                </span>
+                <input id="second_target" calss="second_target" type="number">
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="submit">
+          <span>Click here to calculate</span>
+          <button id="submit">GO!</button>
+        </div>
+      </div>
+      <div class="output">
+        <span class="title"> Price at Each Standard Deviation </span>
+        <div class="stds">
+          <div class="std-neg std-col">
+            <div class="std">
+              <label for="std">-3</label>
+              <input id="std_3" type="text" readonly="">
+            </div>
+            <div class="std">
+              <label for="std">-2</label>
+              <input id="std_2" type="text" readonly="">
+            </div>
+            <div class="std">
+              <label for="std">-1</label>
+              <input id="std_1" type="text" readonly="">
+            </div>
+          </div>
+          <div class="std-pos std-col">
+            <div class="std">
+              <label for="std">+1</label>
+              <input id="std1" type="text" readonly="">
+            </div>
+            <div class="std">
+              <label for="std">+2</label>
+              <input id="std2" type="text" readonly="">
+            </div>
+            <div class="std">
+              <label for="std">+3</label>
+              <input id="std3" type="text" readonly="">
+            </div>
+          </div>
+        </div>
+
+        <span class="title"> Probability of: </span>
+        <div class="probablitiy">
+          <div class="p p1">
+            <span>Finishing below lowest target</span>
+            <input type="number" id="below" value="0" readonly="">
+          </div>
+          <div class="p p21">
+            <span>Finishing between two targets</span>
+            <input type="number" id="between" value="0" readonly="">
+          </div>
+          <div class="p p2">
+            <span>Finishing above highest target</span>
+            <input type="number" id="above" value="0" readonly="">
+          </div>
+        </div>
+      </div>
+      <span class="brand">
+        <a href="#">&nbsp</a>
+      </span>
+    </div>
+  </div>
+
+  <script src="probability.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+  :root {
+      --bgcolor: rgb(97, 152, 105);
+      --bgcolor-light: rgb(174, 221, 153);
+      --text-color: #fff;
+    }
+
+    body {
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    input {
+      font-size: 16px;
+    }
+
+    .calculator {
+      width: 98vw;
+      min-height: 95vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .work-area {
+      border: 1px solid gray;
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 60vw;
+    }
+
+    .input {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    form {
+      width: 70%;
+    }
+
+    .flex {
+      display: flex;
+      margin: 1rem;
+    }
+
+    .targets {
+      position: relative;
+      display: flex;
+      width: 100%;
+      margin: -1rem;
+      /* outline: 1px solid red; */
+      justify-content: center;
+    }
+
+    .flex1 {
+      display: flex;
+      margin: 1rem;
+    }
+
+    .flex span {
+      background-color: var(--bgcolor);
+      color: var(--text-color);
+      width: 60%;
+      margin-right: 3px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+
+    }
+
+    form input {
+      width: 30%;
+      min-height: 1rem;
+    }
+
+    .flex label {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+
+    #submit {
+      background-color: var(--bgcolor);
+      color: var(--text-color);
+      padding: .4rem 1rem;
+      margin-left: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+
+    }
+
+    #submit:hover {
+      background-color: var(--bgcolor-light);
+    }
+
+    .output {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.5rem;
+    }
+
+    .output .title {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      margin-left: 1rem;
+
+    }
+
+    .stds {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      margin: .8rem 0;
+    }
+
+    .std-col {
+      display: flex;
+      flex-direction: row;
+      width: 50%;
+    }
+
+    .std {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 33.3%;
+    }
+
+    .std label {
+      display: inline-block;
+      width: 99%;
+      text-align: center;
+      color: var(--text-color);
+      background-color: var(--bgcolor);
+      border-radius: 4px 4px 0 0;
+      padding: 0.1rem 0;
+    }
+
+    .std input {
+      width: calc(99% - 2px);
+      border-radius: 0px 0px 4px 4px;
+      border: 1px solid gray;
+      padding: 0.1rem 0;
+      text-align: center;
+      min-height: 1rem;
+    }
+
+    .probablitiy {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .p {
+      display: flex;
+      width: 30%;
+      flex-direction: column;
+    }
+
+    .p span {
+      background-color: var(--bgcolor);
+      padding: 0.1rem;
+      color: var(--text-color);
+      border-radius: 4px 4px 0 0;
+    }
+
+    .p input {
+      padding: 0.1rem 0;
+      text-align: center;
+    }
+
+    .brand {
+      display: inline-block;
+      width: 100%;
+      text-align: right;
+      margin-top: 1rem;
+    }
+
+    .brand a {
+      text-decoration: none;
+      color: black;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width:950px) {
+      .work-area {
+        width: 80vw;
+      }
+    }
+
+    @media (max-width:700px) {
+      .flex {
+        margin: 1rem;
+      }
+
+      .std-col {
+        flex-direction: column;
+      }
+
+      .std-col+.std-col {
+        align-items: flex-end;
+        flex-direction: column-reverse;
+      }
+
+      .std {
+        display: flex;
+        flex-direction: column;
+        align-items: s;
+        width: 90%;
+      }
+
+      .std+.std {
+        text-align: right;
+      }
+
+      form {
+        width: 90%;
+      }
+
+      .work-area {
+        width: 80vw;
+      }
+    }
+
+    @media (max-width:680px) {
+      .work-area {
+        width: 90vw;
+      }
+    }
+
+    @media (max-width:620px) {
+      .work-area {
+        width: 90vw;
+      }
+    }
+
+    @media (max-width:450px) {
+      .probablitiy {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* margin:  0.5rem; */
+      }
+
+      .p {
+        width: 80%;
+        margin-bottom: 3px;
+      }
+    }
